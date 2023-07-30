@@ -1,7 +1,6 @@
 FROM bellsoft/liberica-openjdk-alpine:17 AS builder
 WORKDIR application
 COPY gradle gradle
-COPY .gradle .gradle
 COPY gradlew gradlew
 COPY build.gradle.kts build.gradle.kts
 RUN sed -i 's/\r$//' gradlew # For windows os
